@@ -1,5 +1,5 @@
 {
-  "name": "Databowl/databowl-vapi",
+  "name": "databowl/databowl-vapi",
   "description": "A PHP client for the Databowl Validation API (VAPI)",
   "keywords": ["php", "api", "databowl", "vapi", "client"],
   "homepage": "https://github.com/Databowl/databowl-vapi",
