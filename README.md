@@ -2,11 +2,11 @@
 
 ## Introduction
 
-This package contains a PHP library to communicate with the Databowls VAPI service.
+This package contains a PHP library to communicate with the Databowl's VAPI service.
 
 ## Installation
 
-The recommended way to install php-scheduler is through [Composer](http://getcomposer.org).
+The recommended way to install databowl/databowl-vapi is through [Composer](http://getcomposer.org).
 
 ```bash
 composer require databowl/databowl-vapi
