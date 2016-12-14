@@ -20,6 +20,7 @@ class Client
 
     /**
      * Client constructor.
+     *
      * @param ClientConfig $config
      * @param HttpClientInterface|null $httpClient
      */
@@ -27,6 +28,16 @@ class Client
     {
         $this->config = $config;
         $this->httpClient = is_null($httpClient) ? $this->createHttpClient() : $httpClient;
+    }
+
+    /**
+     * @param string $privateKey
+     * @param string $publicKey
+     */
+    public function setKeys($privateKey, $publicKey)
+    {
+        $this->config->setPrivateKey($privateKey);
+        $this->config->setPublicKey($publicKey);
     }
 
     /**
@@ -105,6 +116,5 @@ class Client
         $result->hydrateFromArray($responseData);
 
         return $result;
-
     }
 }
