@@ -174,4 +174,20 @@ class PafResult extends AbstractResult
     {
         $this->premises = $premises;
     }
+
+    /**
+     * @param array $data
+     */
+    public function hydrateFromArray(array $data)
+    {
+        if (!isset($data['pafAddress']) || !is_array($data['pafAddress'])) {
+            return;
+        }
+
+        foreach ($data['pafAddress'] as $key => $value) {
+            if (property_exists($this, $key)) {
+                $this->$key = $value;
+            }
+        }
+    }
 }
