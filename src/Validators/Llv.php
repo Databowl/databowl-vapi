@@ -11,6 +11,11 @@ class Llv implements IsRequest
     protected $phone;
 
     /**
+     * @var string
+     */
+    protected $country = 'GB';
+
+    /**
      * @return string
      */
     public function getService()
@@ -32,7 +37,8 @@ class Llv implements IsRequest
     public function getParameters()
     {
         return [
-           'phone' => $this->phone,
+            'phone' => $this->phone,
+            'country' => $this->country
         ];
     }
 
@@ -58,5 +64,21 @@ class Llv implements IsRequest
     public function setPhone($phone)
     {
         $this->phone = $phone;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCountry()
+    {
+        return $this->country;
+    }
+
+    /**
+     * @param string $country
+     */
+    public function setCountry($country)
+    {
+        $this->country = $country;
     }
 }
