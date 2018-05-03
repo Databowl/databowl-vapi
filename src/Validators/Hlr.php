@@ -11,6 +11,11 @@ class Hlr implements IsRequest
     protected $mobile;
 
     /**
+     * @var string
+     */
+    protected $country = 'GB';
+
+    /**
      * @return string
      */
     public function getService()
@@ -32,7 +37,8 @@ class Hlr implements IsRequest
     public function getParameters()
     {
         return [
-           'mobile' => $this->mobile,
+            'mobile' => $this->mobile,
+            'country' => $this->country,
         ];
     }
 
@@ -58,5 +64,21 @@ class Hlr implements IsRequest
     public function setMobile($mobile)
     {
         $this->mobile = $mobile;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCountry()
+    {
+        return $this->country;
+    }
+
+    /**
+     * @param string $country
+     */
+    public function setCountry($country)
+    {
+        $this->country = $country;
     }
 }
