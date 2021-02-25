@@ -1,21 +1,28 @@
 {
-  "name": "databowl/databowl-vapi",
-  "description": "A PHP client for the Databowl Validation API (VAPI)",
-  "keywords": ["php", "api", "databowl", "vapi", "client"],
-  "homepage": "https://github.com/Databowl/databowl-vapi",
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "pmill",
-      "email": "dev.pmill@gmail.com"
+    "name": "databowl/databowl-vapi",
+    "description": "A PHP client for the Databowl Validation API (VAPI)",
+    "keywords": [
+        "php",
+        "api",
+        "databowl",
+        "vapi",
+        "client"
+    ],
+    "homepage": "https://github.com/Databowl/databowl-vapi",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "pmill",
+            "email": "dev.pmill@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Databowl\\Vapi\\": "src/"
+        }
     }
-  ],
-  "require": {
-    "guzzlehttp/guzzle": "^6.2"
-  },
-  "autoload": {
-    "psr-4": {
-      "Databowl\\Vapi\\": "src/"
-    }
-  }
 }
+
